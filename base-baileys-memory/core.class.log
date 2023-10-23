@@ -1,0 +1,134 @@
+[handleMsg]:  {
+  key: {
+    remoteJid: '573045823092@s.whatsapp.net',
+    fromMe: false,
+    id: '3A2252BB6DB121CB52BC',
+    participant: undefined
+  },
+  messageTimestamp: 1695411399,
+  pushName: 'angie tatiana peña peña',
+  broadcast: false,
+  message: Message {
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    },
+    viewOnceMessageV2: FutureProofMessage { message: [Message] }
+  },
+  body: '',
+  from: '573045823092'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '573057720056@s.whatsapp.net',
+    fromMe: false,
+    id: '3A04C9CAA2969375F2CB',
+    participant: undefined
+  },
+  messageTimestamp: 1695411612,
+  pushName: 'Mariana G',
+  broadcast: false,
+  message: Message {
+    conversation: 'Hola',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'Hola',
+  from: '573057720056'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_1119e876-11e6-4ec9-97ab-f912bc41ab90',
+  keyword: 'key_7627f4ca-9bd9-4ae5-898f-5c4becfc0414',
+  answer: 'Hola bienvenido a el *Chatbot de BEU*',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: '5402d5fd23bd29e40e9f6692945de220'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_bf1e5b36-6184-46b1-aed9-f6906dd1d207',
+  keyword: 'ans_1119e876-11e6-4ec9-97ab-f912bc41ab90',
+  answer: 'En este chat podras encontrar más información acerca de los diferentes eventos reportados en nuestra APP\n' +
+    'Por favor escribe alguna de las siguientes opciones:\n' +
+    '👉 *CAPS* para ver informacion de eventos relacionados a CAPS\n' +
+    '👉 *CJFD* para ver eventos relacionados por el Centro Javeriano de Formación Deportiva\n' +
+    '👉 *Duda* en caso de no haber sidos claros con la informacion ',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    nested: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object]
+    ],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: 'f2ca2e3cab8ce0e5b0878b4db760fd4c'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '573057720056@s.whatsapp.net',
+    fromMe: false,
+    id: '3A3EAC8F7611FDC77A79',
+    participant: undefined
+  },
+  messageTimestamp: 1695411635,
+  pushName: 'Mariana G',
+  broadcast: false,
+  message: Message {
+    conversation: 'CJFD',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'CJFD',
+  from: '573057720056'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_d3778f36-a8b4-49af-bd05-c1c4d3433bc7',
+  keyword: 'key_319e430a-6630-4c32-b11d-52cdc00f644b',
+  answer: 'Eventos relacionados al Centro Javeriano de Formación Deportiva:',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '9a7ce504314400ad2e153569d4360969'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_6becd963-5841-47be-b9a7-396fb6f3bc0c',
+  keyword: 'ans_d3778f36-a8b4-49af-bd05-c1c4d3433bc7',
+  answer: 'Escribe Duda si no te quedó clara la informacion',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    nested: [ [Object], [Object] ],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: 'dbc97dd547c8bf6929e63500c8fbdd65'
+}
