@@ -4,14 +4,35 @@ const BaileysProvider = require('@bot-whatsapp/provider/baileys')
 const MockAdapter = require('@bot-whatsapp/database/mock')
 const axios = require('axios'); // Importa la biblioteca axios
 
-const eventosDeportivos = async () => {
+const flowPrincipal = addKeyword(['hola', 'ole', 'alo', 'volver'])
+    .addAnswer('Hola bienvenido a el *Chatbot de BEU*')
+    .addAnswer(
+        [
+            'En este chat podras encontrar más información acerca de los diferentes eventos reportados en nuestra APP',
+            'Por favor escribe alguna de las siguientes opciones:',
+            '👉 *1* para ver informacion de eventos relacionados a el Centro Javeriano de Formación Deportiva',
+            '👉 *2* para ver eventos relacionados a temas Culturales',
+            '👉 *3* para ver eventos relacionados a Identidad y Comunidad',
+            '👉 *4* para ver eventos relacionados a Pastoral',
+            '👉 *5* para ver eventos relacionados a Psicologia y Salud',
+            '👉 *Duda* en caso de no haber sidos claros con la informacion ',
+        ],
+        null,
+        null,
+        [flowCultural, flowCJFD, flowDuda, flowIdCom, flowPsicologia, flowPast]
+    )
+
+
+
+const eventosDB = async (endpoint) => {
     try {
-        const response = await axios.get('http://localhost:8081/eventosPUJ/evento/estado/centro/publicado/Deportivo');
+        const response = await axios.get(`http://localhost:8081/eventosPUJ/evento/${endpoint}`);
         
         if (response.status === 200) {
             const data = response.data;
             const eventosMapeados = data.map(evento => ({
-                body: `${evento.name} ${evento.date_start}`
+                body: `${evento.name}\nDia:${evento.date_start}\nHora: ${evento.time_start}\n\n${evento.description} `,
+                media: evento.url_poster
             }));
             
             return eventosMapeados;
@@ -24,21 +45,49 @@ const eventosDeportivos = async () => {
 };
 
 const flowDuda = addKeyword(['Duda', 'duda', 'dudas'])
-    .addAnswer('No hemos sido claros con la información. Por favor, pregunta tu duda.')
- 
-const flowCAPS = addKeyword(['CAPS', 'cap', 'caps'])
-    .addAnswer('Eventos relacionados a CAPS:')
-    .addAnswer('1. Evento 1 de CAPS')
-    .addAnswer('2. Evento 2 de CAPS')
-    .addAnswer('3. Evento 3 de CAPS')
+    .addAnswer('En caso de tener dudas puedes comunicarte al correo *vicemed@javeriana.edu.co* especificando toda la informacion acerca de la duda que presentes.')
+    .addAnswer('Escribe *Volver* para ir al inicio')
 
-const flowCJFD = addKeyword(['CJFD', 'cjf', 'cjfd'])
-    .addAnswer('Eventos relacionados al Centro Javeriano de Formación Deportiva:', null,async(ctx,{flowDynamic}) => {
+
+//Psicologia
+const flowPsicologia = addKeyword(['Psicologia', 'Salud', '5'])
+.addAnswer('Eventos relacionados al Psicologia y Salud:', null,async(ctx,{flowDynamic}) => {
+    try {
+        const data = await eventosDB('estado/centro/publicado/Psicologia y Salud');
+        const eventosMessages = data.map(evento => ({
+            body: `${evento.body}`,
+            media: `${evento.media}`,
+            delay: 1000
+        }));
+
+        // Usa flowDynamic para mostrar los eventos en el chatbot
+        await flowDynamic(eventosMessages);
+       
+    } catch (error) {
+        console.error('Error al obtener o mostrar los eventos:', error);
+        // Manejo de error en caso de fallo en la solicitud o en el mapeo
+        flowDynamic('Ocurrió un error al obtener los eventos. Por favor, intenta nuevamente más tarde.');
+    }
+})
+.addAnswer(['Escribe Duda si no te quedó clara la informacion'],null,null,[flowDuda])
+
+
+
+
+//Pastoral
+const flowPast = addKeyword(['Pastoral', 'past', '4'])
+    .addAnswer('Eventos relacionados a Pastoral:', null,async(ctx,{flowDynamic}) => {
         try {
-            const data = await eventosDeportivos();
-            const eventosMessage = data.map(evento => evento.body).join('\n'); // Concatena los cuerpos de los eventos
+            const data = await eventosDB('estado/centro/publicado/Pastoral');
+            const eventosMessages = data.map(evento => ({
+                body: `${evento.body}`,
+                media: `${evento.media}`,
+                delay: 1000
+            }));
+
             // Usa flowDynamic para mostrar los eventos en el chatbot
-            flowDynamic(eventosMessage);
+            await flowDynamic(eventosMessages);
+           
         } catch (error) {
             console.error('Error al obtener o mostrar los eventos:', error);
             // Manejo de error en caso de fallo en la solicitud o en el mapeo
@@ -48,20 +97,78 @@ const flowCJFD = addKeyword(['CJFD', 'cjf', 'cjfd'])
     .addAnswer(['Escribe Duda si no te quedó clara la informacion'],null,null,[flowDuda])
 
 
-const flowPrincipal = addKeyword(['hola', 'ole', 'alo'])
-    .addAnswer('Hola bienvenido a el *Chatbot de BEU*')
-    .addAnswer(
-        [
-            'En este chat podras encontrar más información acerca de los diferentes eventos reportados en nuestra APP',
-            'Por favor escribe alguna de las siguientes opciones:',
-            '👉 *CAPS* para ver informacion de eventos relacionados a CAPS',
-            '👉 *CJFD* para ver eventos relacionados por el Centro Javeriano de Formación Deportiva',
-            '👉 *Duda* en caso de no haber sidos claros con la informacion ',
-        ],
-        null,
-        null,
-        [flowCAPS, flowCJFD, flowDuda]
-    )
+
+//Identidad y Comunidad
+const flowIdCom = addKeyword(['Identidad', 'Comunidad', '3'])
+    .addAnswer('Eventos relacionados a Identidad y Comunidad Javeriana:', null,async(ctx,{flowDynamic}) => {
+        try {
+            const data = await eventosDB('estado/centro/publicado/Identidad y Comunidad');
+            const eventosMessages = data.map(evento => ({
+                body: `${evento.body}`,
+                media: `${evento.media}`,
+                delay: 1000
+            }));
+
+            // Usa flowDynamic para mostrar los eventos en el chatbot
+            await flowDynamic(eventosMessages);
+           
+        } catch (error) {
+            console.error('Error al obtener o mostrar los eventos:', error);
+            // Manejo de error en caso de fallo en la solicitud o en el mapeo
+            flowDynamic('Ocurrió un error al obtener los eventos. Por favor, intenta nuevamente más tarde.');
+        }
+    })
+    .addAnswer(['Escribe Duda si no te quedó clara la informacion'],null,null,[flowDuda])
+    
+
+
+ //CULTURAL
+const flowCultural = addKeyword(['Culturales', 'cult', '2'])
+.addAnswer('Eventos relacionados al Centro Javeriano de Formación Deportiva:', null,async(ctx,{flowDynamic}) => {
+    try {
+        const data = await eventosDB('estado/centro/publicado/Cultural');
+        const eventosMessages = data.map(evento => ({
+            body: `${evento.body}`,
+            media: `${evento.media}`,
+            delay: 1000
+        }));
+
+        // Usa flowDynamic para mostrar los eventos en el chatbot
+        await flowDynamic(eventosMessages);
+       
+    } catch (error) {
+        console.error('Error al obtener o mostrar los eventos:', error);
+        // Manejo de error en caso de fallo en la solicitud o en el mapeo
+        flowDynamic('Ocurrió un error al obtener los eventos. Por favor, intenta nuevamente más tarde.');
+    }
+})
+.addAnswer(['Escribe Duda si no te quedó clara la informacion'],null,null,[flowDuda])
+
+
+//CJFD
+const flowCJFD = addKeyword(['CJFD', 'cjf', 'cjfd', '1'])
+    .addAnswer('Eventos relacionados al Centro Javeriano de Formación Deportiva:', null,async(ctx,{flowDynamic}) => {
+        try {
+            const data = await eventosDB('estado/centro/publicado/Deportivo');
+            const eventosMessages = data.map(evento => ({
+                body: `${evento.body}`,
+                media: `${evento.media}`,
+                delay: 1000
+            }));
+
+            // Usa flowDynamic para mostrar los eventos en el chatbot
+            await flowDynamic(eventosMessages);
+        } catch (error) {
+            console.error('Error al obtener o mostrar los eventos:', error);
+            // Manejo de error en caso de fallo en la solicitud o en el mapeo
+            flowDynamic('Ocurrió un error al obtener los eventos. Por favor, intenta nuevamente más tarde.');
+        }
+    })
+    .addAnswer(['Escribe Duda si no te quedó clara la informacion o Volver para ir al inicio'],null,null,[flowDuda, flowPrincipal])
+
+
+
+ 
 
 const main = async () => {
     const adapterDB = new MockAdapter()
