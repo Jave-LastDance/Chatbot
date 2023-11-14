@@ -1,12 +1,12 @@
 [handleMsg]:  {
   key: {
-    remoteJid: '573125301766@s.whatsapp.net',
+    remoteJid: '573188353884@s.whatsapp.net',
     fromMe: false,
-    id: '3A1C7ABDE5603085AF90',
+    id: '3AF424CEDC9FE85C0B5F',
     participant: undefined
   },
-  messageTimestamp: 1698910296,
-  pushName: 'Juan',
+  messageTimestamp: 1699932764,
+  pushName: 'Karol',
   broadcast: false,
   message: Message {
     conversation: 'Hola',
@@ -16,11 +16,11 @@
     }
   },
   body: 'Hola',
-  from: '573125301766'
+  from: '573188353884'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_06260b80-c162-4b23-8fec-4aef22ef206b',
-  keyword: 'key_a85de13d-5bca-461f-b261-5d160def6ee8',
+  ref: 'ans_40575019-5b06-4759-a5f5-ed43d1d112cb',
+  keyword: 'key_49f506f6-c200-432f-8db2-26db02e1b308',
   answer: 'Hola bienvenido a el *Chatbot de BEU*',
   options: {
     media: null,
@@ -32,11 +32,11 @@
     keyword: {},
     callback: false
   },
-  refSerialize: 'd61475568f2688d7d94e81d6993bd92d'
+  refSerialize: '2f2653b519a921abdeeeb38d5be0bf05'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_92f38eb0-e89c-41dc-aef8-7881859ceb3f',
-  keyword: 'ans_06260b80-c162-4b23-8fec-4aef22ef206b',
+  ref: 'ans_9bd56945-5cd1-4b1f-8aa8-1f1b58f2abc8',
+  keyword: 'ans_40575019-5b06-4759-a5f5-ed43d1d112cb',
   answer: 'En este chat podras encontrar más información acerca de los diferentes eventos reportados en nuestra APP\n' +
     'Por favor escribe alguna de las siguientes opciones:\n' +
     '👉 *1* para ver informacion de eventos relacionados a el Centro Javeriano de Formación Deportiva\n' +
@@ -62,17 +62,17 @@
     keyword: {},
     callback: false
   },
-  refSerialize: 'cb8d1f3d9825284b610b4c9660070469'
+  refSerialize: '7ea0273e2ac15cc8424c6e030d412b6a'
 }
 [handleMsg]:  {
   key: {
-    remoteJid: '573125301766@s.whatsapp.net',
+    remoteJid: '573188353884@s.whatsapp.net',
     fromMe: false,
-    id: '3AE672DCFAC315EEFD14',
+    id: '3A8EF55C9E8766A42853',
     participant: undefined
   },
-  messageTimestamp: 1698910298,
-  pushName: 'Juan',
+  messageTimestamp: 1699932771,
+  pushName: 'Karol',
   broadcast: false,
   message: Message {
     conversation: '1',
@@ -82,11 +82,11 @@
     }
   },
   body: '1',
-  from: '573125301766'
+  from: '573188353884'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_265ee3eb-6330-4917-9633-9aa5f3f56fc3',
-  keyword: 'key_c49c0a1a-a61e-47fd-97b0-cdbb80ae604d',
+  ref: 'ans_129379ed-51a2-4d5a-96eb-f602b8337f78',
+  keyword: 'key_f527834f-284d-4182-a73e-3f1e04570045',
   answer: 'Eventos relacionados al Centro Javeriano de Formación Deportiva:',
   options: {
     media: null,
@@ -98,11 +98,11 @@
     keyword: {},
     callback: true
   },
-  refSerialize: '6ba1854567fcc3c26a9bc0c57e129de4'
+  refSerialize: '4b357c313090349ece317547bf8accae'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_5349f8c5-cea9-4956-84de-5953043b8765',
-  keyword: 'ans_265ee3eb-6330-4917-9633-9aa5f3f56fc3',
+  ref: 'ans_cd4464c3-dd29-4fea-b34e-cce32a802a99',
+  keyword: 'ans_129379ed-51a2-4d5a-96eb-f602b8337f78',
   answer: 'Escribe Duda si no te quedó clara la informacion o Volver para ir al inicio',
   options: {
     media: null,
@@ -114,17 +114,17 @@
     keyword: {},
     callback: false
   },
-  refSerialize: 'b510f7a2207acb9eab89fbbbefab8e0a'
+  refSerialize: '7e3eefd18c81c5c3b922e5127c04eb68'
 }
 [handleMsg]:  {
   key: {
-    remoteJid: '573125301766@s.whatsapp.net',
+    remoteJid: '573188353884@s.whatsapp.net',
     fromMe: false,
-    id: '3A3B6BB207AECBC1789D',
+    id: '3AD1C5E74B461C1DEA26',
     participant: undefined
   },
-  messageTimestamp: 1698910305,
-  pushName: 'Juan',
+  messageTimestamp: 1699932785,
+  pushName: 'Karol',
   broadcast: false,
   message: Message {
     conversation: 'Duda',
@@ -134,11 +134,11 @@
     }
   },
   body: 'Duda',
-  from: '573125301766'
+  from: '573188353884'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_81e475f2-1c84-4788-9380-34cdd2c459e8',
-  keyword: 'key_498c3ff2-7fac-4a3f-8f34-45391b72e331',
+  ref: 'ans_eef31679-25cb-49bf-af9a-2ef3fe7e8536',
+  keyword: 'key_62a8974b-ed0b-4782-a78d-6b80c5707b3c',
   answer: 'En caso de tener dudas puedes comunicarte al correo *vicemed@javeriana.edu.co* especificando toda la informacion acerca de la duda que presentes.',
   options: {
     media: null,
@@ -150,11 +150,11 @@
     keyword: {},
     callback: false
   },
-  refSerialize: 'e3c5e64aee5a125d8401a0a4af75a5c6'
+  refSerialize: '16ae5f03c1eac9a43d043c876dd6bccd'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_e717168a-10e0-4c12-b417-9db887c93d6f',
-  keyword: 'ans_81e475f2-1c84-4788-9380-34cdd2c459e8',
+  ref: 'ans_39d87724-4030-4439-8074-1339f28c5a3d',
+  keyword: 'ans_eef31679-25cb-49bf-af9a-2ef3fe7e8536',
   answer: 'Escribe *Volver* para ir al inicio',
   options: {
     media: null,
@@ -166,17 +166,17 @@
     keyword: {},
     callback: false
   },
-  refSerialize: '45c72f459cbf604d952be3663daa4174'
+  refSerialize: 'e72f09257701cf9527c61d4fd0099a8b'
 }
 [handleMsg]:  {
   key: {
-    remoteJid: '573125301766@s.whatsapp.net',
+    remoteJid: '573188353884@s.whatsapp.net',
     fromMe: false,
-    id: '3A9585FC21EED2F6EAD6',
+    id: '3A05034EB9F57B198F6A',
     participant: undefined
   },
-  messageTimestamp: 1698910311,
-  pushName: 'Juan',
+  messageTimestamp: 1699932792,
+  pushName: 'Karol',
   broadcast: false,
   message: Message {
     conversation: 'Volver',
@@ -186,11 +186,11 @@
     }
   },
   body: 'Volver',
-  from: '573125301766'
+  from: '573188353884'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_06260b80-c162-4b23-8fec-4aef22ef206b',
-  keyword: 'key_a85de13d-5bca-461f-b261-5d160def6ee8',
+  ref: 'ans_40575019-5b06-4759-a5f5-ed43d1d112cb',
+  keyword: 'key_49f506f6-c200-432f-8db2-26db02e1b308',
   answer: 'Hola bienvenido a el *Chatbot de BEU*',
   options: {
     media: null,
@@ -202,11 +202,11 @@
     keyword: {},
     callback: false
   },
-  refSerialize: 'd61475568f2688d7d94e81d6993bd92d'
+  refSerialize: '2f2653b519a921abdeeeb38d5be0bf05'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_92f38eb0-e89c-41dc-aef8-7881859ceb3f',
-  keyword: 'ans_06260b80-c162-4b23-8fec-4aef22ef206b',
+  ref: 'ans_9bd56945-5cd1-4b1f-8aa8-1f1b58f2abc8',
+  keyword: 'ans_40575019-5b06-4759-a5f5-ed43d1d112cb',
   answer: 'En este chat podras encontrar más información acerca de los diferentes eventos reportados en nuestra APP\n' +
     'Por favor escribe alguna de las siguientes opciones:\n' +
     '👉 *1* para ver informacion de eventos relacionados a el Centro Javeriano de Formación Deportiva\n' +
@@ -232,143 +232,65 @@
     keyword: {},
     callback: false
   },
-  refSerialize: 'cb8d1f3d9825284b610b4c9660070469'
+  refSerialize: '7ea0273e2ac15cc8424c6e030d412b6a'
 }
 [handleMsg]:  {
   key: {
-    remoteJid: '573125301766@s.whatsapp.net',
+    remoteJid: '573188353884@s.whatsapp.net',
     fromMe: false,
-    id: '3A34A8373FDB68AEB6BF',
+    id: '3A7B3B449851AD442C24',
     participant: undefined
   },
-  messageTimestamp: 1698910318,
-  pushName: 'Juan',
+  messageTimestamp: 1699932812,
+  pushName: 'Karol',
   broadcast: false,
   message: Message {
-    conversation: '1',
+    conversation: 'Su madre',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2
     }
   },
-  body: '1',
-  from: '573125301766'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_265ee3eb-6330-4917-9633-9aa5f3f56fc3',
-  keyword: 'key_c49c0a1a-a61e-47fd-97b0-cdbb80ae604d',
-  answer: 'Eventos relacionados al Centro Javeriano de Formación Deportiva:',
-  options: {
-    media: null,
-    buttons: [],
-    capture: false,
-    child: null,
-    delay: 0,
-    nested: [],
-    keyword: {},
-    callback: true
-  },
-  refSerialize: '6ba1854567fcc3c26a9bc0c57e129de4'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_5349f8c5-cea9-4956-84de-5953043b8765',
-  keyword: 'ans_265ee3eb-6330-4917-9633-9aa5f3f56fc3',
-  answer: 'Escribe Duda si no te quedó clara la informacion o Volver para ir al inicio',
-  options: {
-    media: null,
-    buttons: [],
-    capture: false,
-    child: null,
-    delay: 0,
-    nested: [ [Object], [Object], [Object] ],
-    keyword: {},
-    callback: false
-  },
-  refSerialize: 'b510f7a2207acb9eab89fbbbefab8e0a'
+  body: 'Su madre',
+  from: '573188353884'
 }
 [handleMsg]:  {
   key: {
-    remoteJid: '573125301766@s.whatsapp.net',
+    remoteJid: '573188353884@s.whatsapp.net',
     fromMe: false,
-    id: '3AAF1278DE3A05D51761',
+    id: '3A532DF33E6CC6DF2C12',
     participant: undefined
   },
-  messageTimestamp: 1698910323,
-  pushName: 'Juan',
+  messageTimestamp: 1699932843,
+  pushName: 'Karol',
   broadcast: false,
   message: Message {
-    conversation: 'Volver',
+    conversation: 'Pene pene pene pene Pene pene pene pene Pene pene pene pene Pene pene pene pene',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2
     }
   },
-  body: 'Volver',
-  from: '573125301766'
+  body: 'Pene pene pene pene Pene pene pene pene Pene pene pene pene Pene pene pene pene',
+  from: '573188353884'
 }
 [handleMsg]:  {
   key: {
-    remoteJid: '573125301766@s.whatsapp.net',
+    remoteJid: '573188353884@s.whatsapp.net',
     fromMe: false,
-    id: '3AF30DB89C1EF2FEA9F9',
+    id: '3A220E6957F25B301849',
     participant: undefined
   },
-  messageTimestamp: 1698910327,
-  pushName: 'Juan',
+  messageTimestamp: 1699932847,
+  pushName: 'Karol',
   broadcast: false,
   message: Message {
-    conversation: 'Volver',
+    conversation: 'Jajajajja',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2
     }
   },
-  body: 'Volver',
-  from: '573125301766'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_06260b80-c162-4b23-8fec-4aef22ef206b',
-  keyword: 'key_a85de13d-5bca-461f-b261-5d160def6ee8',
-  answer: 'Hola bienvenido a el *Chatbot de BEU*',
-  options: {
-    media: null,
-    buttons: [],
-    capture: false,
-    child: null,
-    delay: 0,
-    nested: [],
-    keyword: {},
-    callback: false
-  },
-  refSerialize: 'd61475568f2688d7d94e81d6993bd92d'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_92f38eb0-e89c-41dc-aef8-7881859ceb3f',
-  keyword: 'ans_06260b80-c162-4b23-8fec-4aef22ef206b',
-  answer: 'En este chat podras encontrar más información acerca de los diferentes eventos reportados en nuestra APP\n' +
-    'Por favor escribe alguna de las siguientes opciones:\n' +
-    '👉 *1* para ver informacion de eventos relacionados a el Centro Javeriano de Formación Deportiva\n' +
-    '👉 *2* para ver eventos relacionados a temas Culturales\n' +
-    '👉 *3* para ver eventos relacionados a Identidad y Comunidad\n' +
-    '👉 *4* para ver eventos relacionados a Pastoral\n' +
-    '👉 *5* para ver eventos relacionados a Psicologia y Salud\n' +
-    '👉 *Duda* en caso de no haber sidos claros con la informacion ',
-  options: {
-    media: null,
-    buttons: [],
-    capture: false,
-    child: null,
-    delay: 0,
-    nested: [
-      [Object], [Object], [Object],
-      [Object], [Object], [Object],
-      [Object], [Object], [Object],
-      [Object], [Object], [Object],
-      [Object], [Object], [Object],
-      [Object], [Object], [Object]
-    ],
-    keyword: {},
-    callback: false
-  },
-  refSerialize: 'cb8d1f3d9825284b610b4c9660070469'
+  body: 'Jajajajja',
+  from: '573188353884'
 }
